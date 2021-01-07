@@ -1,0 +1,77 @@
+
+Que.1. Difference between HTTP1.1 vs HTTP2.
+Ans.:
+      HTTP/1.1                                    HTTP/2.0
+-It was released in year 1997.           -It was released in year 2015.
+
+-It is slower than HTTP/2.0.             -It is faster and efficient than HTTP/1.1.
+                                         
+-HTTP/1.1 does't support                 -HTTP/2.0 uses multiplxeing where TCP connection
+multiplexing.It loads the                 sends multiple streams of data,without blocking 
+resources one by one.                     each other.
+
+-HTTP/1.1 doesn't uses server push,      -HTTP/2.0 uses server push,where server sends additional data 
+instead it serves content to a client     without the request of user.
+device if the client asks for it.
+
+-HTTP/1.1 does't prioritise the          -HTTP/2.0 prioritises the content during loading of web pages.
+content during loading.
+
+-HTTP/1.1 does't use efficient header    -HTTP/2.0 uses HPACK for header compression. 
+compression techniques.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Que.2. HTTP version history.
+Ans.:
+HTTP (HyperText Transfer Protocol) is the underlying protocol of the World Wide Web. Developed by Tim Berners-Lee 
+and his team between 1989-1991, HTTP has seen many changes, keeping most of the simplicity and further shaping its flexibility.
+
+HTTP/0.9: The initial version had no any number.HTTP/0.9 is extremely simple as it's requests consist of a single line and start with the 
+only possible method GET followed by the path to the resource.There were no header in it only HTML files were transmitted.
+
+HTTP/1.0: It was launched during 1991-1995. Header's were included in HTTP/1.0. With the help of HTTP header the ability to transmit  other 
+documents along with plain HTML was added.Due to header whole system became faster and efficient.
+A status code line is also sent at the beginning of the response, allowing the browser itself to understand the success or failure of the
+request and to adapt its behavior in consequence
+
+HTTP/1.1:It was released in 1995.
+Following are few keypoints which were included in HTTP/1.1:
+-Additional cache control mechanism was added.
+-Connection reusability.
+-Chunked responses were also supported.
+-Pipelining has been added, allowing to send a second request before the answer for the first one is fully transmitted, lowering the latency of the communication.
+-Content negotiation, including language, encoding, or type, has been introduced, and allows a client and a server to agree on the most adequate content to exchange.
+
+HTTP/1.1 was used over 15 years.During this time the protocol was refined over two times.
+
+HTTP/2.0:It was officially standardised in 2015.
+Googl's experimental SPDY protocol ledded foundation for HTML/2.0.It is fast and efficient than HTTP/1.1.
+HTTP didn't stop evolving upon the release of HTTP/2. Like with HTTP/1.x previously, HTTP's extensibility is still being used to add new features. 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Que.3:List 5 differences between Browser JS vs Node Js.
+Ans.:
+             Node.js                                                    Browser.js 
+-It has full user level system access.                   -It doesn't have full user level system access.
+-Node doesn't have a predefined "window" object          -"window" is a predefined global object which has functions and 
+cause it doesn't have a window to draw anything.	      attributes, that have to deal with window that has been drawn.
+-In Node everything is a module. You must keep           -Moduling is not mandatory in client side JavaScript, i.e. in browsers. 
+your code inside a module.
+-Node processes request object.                          -Browsers processes response objects.
+-"require" object is predefined in Node which            -Browsers don't have "require" predefined. You may include it in your app for asynchronous file loading.
+is used to include modules in the app.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Que.4.What happens when you type a URL in the address bar in the browser?
+Ans.:
+-Browser checks cache for DNS entry to find the corresponding IP address of website.
+-If not found in cache then, ISP's DNS server initiates a DNS query to find IP address of server that hosts the query name.
+-Browser initiates the TCP connection with the server using SYN and ACK message.
+-Browser sends HTTP request to the web server.
+-Server on the host computer handles that request and sends back a response. It assembles a response in some format like JSON, XML and HTML.
+-Server sends out an HTTP response along with the status of response.
+-Then rendering engine tokenise the data and create variou DOM, CSSOM,AST trees.
+-UI backend and browser component displays the content to the user.
